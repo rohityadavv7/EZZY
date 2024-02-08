@@ -31,7 +31,12 @@ app.use(
     })
 );
 
-
+app.get("/", (req,res) => {
+    return res.json({
+        success:true,
+        message:"Your server is up and running..."
+    })
+})
 
 //server ko live krdo
 app.listen(PORT, () => {
