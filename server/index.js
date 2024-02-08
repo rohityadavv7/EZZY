@@ -22,15 +22,6 @@ const todoroutes = require("./routes/todos");
 //MOUNTING
 app.use("/api/v1", todoroutes);
 
-app.use(cookieParser())
-app.use(express.json());
-app.use(
-    cors({
-        origin:"http://localhost:3000",
-        credentials:true
-    })
-);
-
 app.get("/", (req,res) => {
     return res.json({
         success:true,
